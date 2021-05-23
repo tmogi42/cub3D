@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmogi <tmogi@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/23 14:33:23 by tmogi             #+#    #+#             */
-/*   Updated: 2021/05/23 14:33:24 by tmogi            ###   ########.fr       */
+/*   Created: 2021/05/23 16:23:56 by tmogi             #+#    #+#             */
+/*   Updated: 2021/05/23 16:23:56 by tmogi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -175,7 +175,7 @@ size_t	search_newline(char *buf, size_t *i);
 size_t	gnl_strlen(char *str);
 int		gnl_read(int fd, char **line, char **tmp, int *newline_flag);
 char	*gnl_strdup(char **src, size_t newl_p);
-char	*my_strdup(char *dest);
+char	*ft_strdup(char *dest);
 int		gnl_strjoin(char **line, char *src, size_t n);
 int		get_line_from_tmp(char **line, char **tmp);
 int		get_next_line(int fd, char **line, char **tmp);
@@ -189,10 +189,10 @@ int		convert_color(int *color, int *val);
 int		read_map(char *line, t_info *info);
 int		copy_map_to_tmp(t_info *info);
 int		is_valid_size(t_info *info, char *line);
-int		my_strlen(char *str);
-int		my_strcmp(char *str1, char *str2);
-int		my_chrstr(char c, char *str);
-int		my_strstr(char *str1, char *str2);
+int		ft_strlen(char *str);
+int		ft_strcmp(char *str1, char *str2);
+int		ft_chrstr(char c, char *str);
+int		ft_strstr(char *str1, char *str2);
 int		check_only_space(char *line);
 void	draw_floor_and_ceiling(t_info *info);
 void	draw_wall(t_wall *wall, t_info *info, int x);

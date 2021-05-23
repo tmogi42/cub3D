@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmogi <tmogi@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/23 14:33:30 by tmogi             #+#    #+#             */
-/*   Updated: 2021/05/23 14:33:30 by tmogi            ###   ########.fr       */
+/*   Created: 2021/05/23 16:24:05 by tmogi             #+#    #+#             */
+/*   Updated: 2021/05/23 16:25:46 by tmogi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	error(int fd, int result, t_info *info)
 {
 	printf("Error\n");
 	if (result == -1)
-		printf("[ Failed to OPEN cub_file ]\n");
+		printf("[ Something wrong inqut args ]\n");
 	else if (result == -2)
 		printf("[ Failed to INITIALIZE paramaters ]\n");
 	else if (result == -3)
@@ -72,6 +72,8 @@ int	judge_input_args(int argc, char **argv)
 
 int	check_color_val(t_map *map)
 {
+	if (map->c != 2)
+		return (-1);
 	if (map->rgb[0] == -1)
 		return (-1);
 	if (map->rgb[1] == -1)
